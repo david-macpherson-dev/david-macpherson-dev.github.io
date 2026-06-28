@@ -1,2 +1,3 @@
-# david-macpherson-dev.github.io
-Public Profile
+Currently a work in progress
+
+Will be updating soon
