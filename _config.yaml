@@ -1,0 +1,60 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+#theme: jekyll-theme-so-simple
+# remote_theme: mmistakes/so-simple-theme
+#skin: "/assets/css/skins/default.css"
+locale: en-AU
+title: "David MacPherson"
+description: "Welcome to my home"
+#baseurl: "/example" # the subpath of your site, e.g. "/blog"
+url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+#logo: "/images/so-simple-site-logo.png" # path of site logo, e.g. "/assets/images/logo.png"
+date_format: "%YYYY-%MM-%dd"
+read_time: true
+words_per_minute: 200
+
+remote_theme: pages-themes/hacker@v0.2.0
+plugins:
+- jekyll-remote-theme
+
+# mathjax:
+#   enable: true
+
+
+# Site Author
+author:
+  name: David MacPherson
+  #picture: /images/michael-rose-photo.jpg
+  email: david.macpherson.dev@gmail.com
+  links:
+    - title: GitHub
+      url: https://github.com/david-macpherson-dev
+      icon: fab fa-github-square
+
+# Footer Links
+footer_links:
+  # - title: Twitter
+  #   url: https://twitter.com/mmistakes
+  #   icon: fab fa-twitter-square
+  # - title: Instagram
+  #   url: https://instagram.com/mmistakes
+  #   icon: fab fa-instagram
+  - title: GitHub
+    url: https://github.com/david-macpherson-dev
+    icon: fab fa-github-square
+  # - title: Feed
+  #   url: atom.xml
+  #   icon: fas fa-rss-square
