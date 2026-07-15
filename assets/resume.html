@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>resume-v5.0.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file://c:\Users\david\Documents\HR\Lens.org - Experienced Backend Engineer (All-Rounder)\.vscode\markdown-pdf.css" type="text/css">
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="david-macpherson">David MacPherson</h1>
+<p><strong>Backend Software Engineer</strong></p>
+<p>📍 Cairns, Queensland (Remote)<br>
+📞 0400 417 117<br>
+✉️ david.macpherson.dev@gmail.com<br>
+🌐 <a href="https://david-macpherson-dev.github.io/">Website</a>
+💻 <a href="https://github.com/david-macpherson-dev/">Github</a></p>
+<h2 id="professional-summary">Professional Summary</h2>
+<p>Backend Software Engineer with over 20 years of professional IT experience, including five years developing cloud-native platforms, scalable backend services and enterprise infrastructure. Experienced designing and implementing production REST APIs in Go, building Kubernetes-based platforms, automating cloud infrastructure across Amazon Web Services (AWS), Microsoft Azure and Oracle Cloud Infrastructure (OCI), and delivering software that solves complex operational challenges.</p>
+<p>Strong background spanning backend software engineering, cloud platforms, Linux systems engineering and DevOps, with hands-on experience designing distributed systems, automating deployments and developing production-grade services using modern engineering practices. Passionate about building reliable, maintainable software and selecting the right technology for the problem.</p>
+<p>Brings extensive professional backend engineering experience in Go and a proven ability to rapidly learn new languages, frameworks and technologies. Thrives in collaborative engineering teams, enjoys solving complex technical problems and is committed to continuous learning and professional growth.</p>
+<h2 id="professional-highlights">Professional Highlights</h2>
+<ul>
+<li>20+ years professional IT experience</li>
+<li>5+ years building cloud-native backend platforms</li>
+<li>Production REST API development using Go &amp; OpenAPI</li>
+<li>AWS, Kubernetes &amp; Terraform</li>
+<li>Daily Linux user and automation advocate</li>
+<li>Designed custom software adopted across multiple schools</li>
+</ul>
+<h2 id="core-competencies">Core Competencies</h2>
+<ul>
+<li>Backend Software Engineering</li>
+<li>REST API Design &amp; Development</li>
+<li>Distributed Systems</li>
+<li>Microservices Architecture</li>
+<li>Cloud Platform Engineering</li>
+<li>Amazon Web Services (AWS)</li>
+<li>Kubernetes &amp; Container Platforms</li>
+<li>Linux Systems Engineering</li>
+<li>Database Design &amp; Data Processing</li>
+<li>Infrastructure as Code (Terraform)</li>
+<li>DevOps &amp; Automation</li>
+<li>Technical Leadership &amp; Mentoring</li>
+</ul>
+<h2 id="technical-skills">Technical Skills</h2>
+<h3 id="programming-languages">Programming Languages</h3>
+<p>Go • TypeScript • JavaScript • Python • C# • Java (Foundation) • SQL • Bash • PowerShell</p>
+<h3 id="backend-engineering">Backend Engineering</h3>
+<p>RESTful APIs • OpenAPI • go-swagger • gRPC • Microservices • Authentication &amp; Authorisation • Backend Service Development</p>
+<h3 id="cloud--infrastructure">Cloud &amp; Infrastructure</h3>
+<p>AWS • Microsoft Azure • Oracle Cloud Infrastructure (OCI) • CoreWeave • Kubernetes • Docker • Helm • Terraform</p>
+<h3 id="aws-services">AWS Services</h3>
+<p>EC2 • ECS • EKS • ECR • S3 • IAM • VPC • Route 53 • ALB • CloudWatch • Auto Scaling • RDS • Secrets Manager • AWS CLI • AWS SDK for Go</p>
+<h3 id="data-processing">Data Processing</h3>
+<p>Microsoft SQL Server • SQLite • MySQL • SQL • JSON • XML • Relational Database Design • Data Integration • Data Transformation</p>
+<div class="page-break">
+</div>
+<h3 id="operating-systems">Operating Systems</h3>
+<p>Linux • Microsoft Windows / DOS • Windows Server • macOS</p>
+<h3 id="development-tools">Development Tools</h3>
+<p>Git • GitHub • GitLab • Maven • Gradle • Visual Studio Code • JetBrains IDEs • Jira</p>
+<h2 id="professional-experience">Professional Experience</h2>
+<h3 id="backend-software-engineer">Backend Software Engineer</h3>
+<p><strong>TensorWorks</strong><br>
+<em>June 2021 – 2025</em></p>
+<p>Developed backend software, cloud infrastructure and Kubernetes platform services for the Scalable Pixel Streaming (SPS) platform, enabling Unreal Engine applications to be deployed across Amazon Web Services (AWS), Microsoft Azure, Oracle Cloud Infrastructure (OCI) and CoreWeave.</p>
+<h4 id="key-responsibilities">Key Responsibilities</h4>
+<ul>
+<li>Designed, developed and maintained backend services supporting the Scalable Pixel Streaming (SPS) platform.</li>
+<li>Designed and implemented production REST APIs in Go using an OpenAPI-first approach with go-swagger.</li>
+<li>Developed Kubernetes controllers and operators to automate platform deployment and lifecycle management.</li>
+<li>Designed, implemented and maintained cloud infrastructure across Amazon Web Services (AWS), Microsoft Azure, Oracle Cloud Infrastructure (OCI) and CoreWeave.</li>
+<li>Automated infrastructure provisioning and application deployment using Terraform, Docker and Kubernetes.</li>
+<li>Managed production Kubernetes clusters including upgrades, monitoring, networking, ingress and GPU-enabled workloads.</li>
+<li>Developed and maintained distributed Go microservices supporting cloud-native application deployment.</li>
+<li>Participated in software architecture, technical design, code reviews and Agile development activities.</li>
+</ul>
+<h4 id="key-achievements">Key Achievements</h4>
+<ul>
+<li>Evaluated multiple REST API architectures, including <code>net/http</code> and Gorilla Mux, before adopting an OpenAPI-first approach using go-swagger to improve maintainability, consistency and long-term scalability.</li>
+<li>Automated AWS infrastructure using Terraform, the AWS CLI and the AWS SDK for Go, significantly reducing manual deployment effort.</li>
+<li>Worked extensively across AWS services including EC2, ECS, EKS, ECR, S3, IAM, VPC, Route 53, CloudWatch, Application Load Balancers, Auto Scaling, RDS and Secrets Manager.</li>
+<li>Designed and developed the Image Builder Tool (IBT), automating the conversion of Unreal Engine projects into production-ready container images and streamlining customer deployments.</li>
+<li>Rewrote the SPS frontend from JavaScript to TypeScript, improving maintainability, type safety and long-term code quality.</li>
+<li>Investigated and implemented deployment solutions for Azure Marketplace and Oracle Cloud Infrastructure.</li>
+<li>Mentored graduate engineers through technical guidance, code reviews and collaborative development practices.</li>
+<li>Contributed across the full software development lifecycle, from solution design and implementation through testing, deployment and production support.</li>
+</ul>
+<h3 id="computer-administrator">Computer Administrator</h3>
+<p><strong>Queensland Department of Education – Trinity Bay State High School</strong><br>
+<em>January 2018 – June 2021</em></p>
+<p>Provided technical leadership and administration of enterprise ICT infrastructure supporting one of Far North Queensland's largest secondary schools, serving more than 1,500 students and approximately 200 staff.</p>
+<h4 id="key-responsibilities-1">Key Responsibilities</h4>
+<ul>
+<li>Administered enterprise Windows Server infrastructure, Active Directory and Microsoft 365 services.</li>
+<li>Managed Hyper-V virtualisation, enterprise storage systems and server infrastructure.</li>
+<li>Maintained core network services including DNS, DHCP and Group Policy.</li>
+<li>Planned and delivered infrastructure lifecycle upgrades, hardware refreshes and system improvements.</li>
+<li>Managed desktop, laptop and mobile device deployments across the school.</li>
+<li>Provided technical leadership and mentoring to staff and students.</li>
+<li>Worked closely with school leadership to plan technology initiatives and infrastructure investment.</li>
+</ul>
+<h4 id="key-achievements-1">Key Achievements</h4>
+<ul>
+<li>Successfully managed ICT infrastructure supporting a large educational environment with high system availability.</li>
+<li>Led infrastructure refresh projects including server upgrades, computer laboratory deployments and end-user device replacement programs.</li>
+<li>Improved operational efficiency through automation using PowerShell and administrative scripting.</li>
+<li>Supported curriculum delivery by maintaining reliable ICT services across classrooms, specialist teaching areas and administration.</li>
+<li>Worked collaboratively with regional ICT teams on enterprise technology initiatives and operational support.</li>
+</ul>
+<h3 id="computer-technician">Computer Technician</h3>
+<p><strong>Queensland Department of Education – Cairns State High School</strong><br>
+<em>May 2009 – August 2017</em></p>
+<p>Developed software solutions and administered enterprise ICT infrastructure supporting one of Far North Queensland's largest secondary schools. Designed custom applications that automated business processes, improved data quality and reduced administrative effort while maintaining the school's production ICT environment.</p>
+<h4 id="key-responsibilities-2">Key Responsibilities</h4>
+<ul>
+<li>Designed, developed and maintained internal software applications using C# and Microsoft SQL Server.</li>
+<li>Designed relational database schemas supporting operational reporting and student administration.</li>
+<li>Developed database queries, reports and data processing workflows.</li>
+<li>Administered Windows Server infrastructure, Active Directory, Hyper-V and enterprise storage systems.</li>
+<li>Automated administrative and data processing workflows using C#, PowerShell and scripting.</li>
+<li>Provided technical support for approximately 1,500 students and more than 150 staff.</li>
+</ul>
+<h4 id="key-achievements-2">Key Achievements</h4>
+<ul>
+<li>Designed and developed the Student Data Suite, a C# and Microsoft SQL Server application that streamlined the recording, management and reporting of student academic results.</li>
+<li>Designed relational database schemas and optimised SQL queries to support reporting, administration and data management requirements.</li>
+<li>Designed and developed CHUM, a configurable data integration application that imported student information into SQLite before generating vendor-specific export datasets.</li>
+<li>Implemented JSON-driven database schemas and SQL query definitions, allowing new vendor integrations to be added without modifying application code.</li>
+<li>Developed XML-based deployment and configuration scripts to support desktop rollout and software deployment.</li>
+<li>Reduced manual administration by automating repetitive data processing and reporting tasks across multiple business functions.</li>
+<li>Shared CHUM with other Department of Education schools, allowing the solution to be reused beyond Cairns State High School.</li>
+<li>Played a key role in server upgrades, storage management and infrastructure improvements throughout the school.</li>
+</ul>
+<h3 id="acting-regional-systems-technician">Acting Regional Systems Technician</h3>
+<p><strong>Queensland Department of Education</strong><br>
+<em>August 2017 – October 2017 (Secondment)</em></p>
+<p>Provided second-level technical support to schools across the Far North Queensland region, assisting local ICT teams with enterprise infrastructure, system deployments and operational support.</p>
+<h4 id="key-responsibilities-3">Key Responsibilities</h4>
+<ul>
+<li>Provided technical assistance to schools across the region.</li>
+<li>Supported enterprise Windows Server infrastructure and Active Directory environments.</li>
+<li>Assisted with large-scale system deployments, upgrades and troubleshooting.</li>
+<li>Worked collaboratively with regional ICT staff to resolve complex technical issues.</li>
+</ul>
+<h3 id="rollout-deployment-technician">Rollout Deployment Technician</h3>
+<p><strong>Queensland Department of Education</strong><br>
+<em>May 2008 – January 2009</em></p>
+<p>Supported the statewide rollout of the Department of Education's Managed Operating Environment (MOE), preparing and deploying desktop systems across multiple schools.</p>
+<h4 id="key-responsibilities-4">Key Responsibilities</h4>
+<ul>
+<li>Built and deployed Managed Operating Environment (MOE) images across multiple school sites.</li>
+<li>Automated workstation deployment using Ghost and Windows Deployment Services.</li>
+<li>Prepared desktop and laptop hardware for deployment.</li>
+<li>Assisted schools during large-scale technology rollouts.</li>
+<li>Diagnosed and resolved deployment and imaging issues during rollout activities.</li>
+</ul>
+<div class="page-break">
+</div>
+<h3 id="it-trainee">IT Trainee</h3>
+<p><strong>St Augustine's College</strong><br>
+<em>January 2005 – December 2007</em></p>
+<p>Commenced my professional IT career providing technical support while completing a Certificate III in Information Technology, gaining hands-on experience across desktop support, server administration and enterprise ICT operations.</p>
+<h4 id="key-responsibilities-5">Key Responsibilities</h4>
+<ul>
+<li>Provided first-level technical support for staff and students.</li>
+<li>Assisted with Windows Server administration and desktop support.</li>
+<li>Installed, configured and maintained computer hardware and software.</li>
+<li>Supported day-to-day ICT operations across the college.</li>
+</ul>
+<h2 id="key-engineering-projects">Key Engineering Projects</h2>
+<h3 id="scalable-pixel-streaming-sps">Scalable Pixel Streaming (SPS)</h3>
+<p>Designed, developed and maintained a cloud-native platform enabling Unreal Engine applications to be deployed across Kubernetes clusters running on Amazon Web Services (AWS), Microsoft Azure, Oracle Cloud Infrastructure (OCI) and CoreWeave.</p>
+<h4 id="highlights">Highlights</h4>
+<ul>
+<li>Designed and implemented production backend services and REST APIs in Go.</li>
+<li>Developed Kubernetes controllers and operators to automate platform management.</li>
+<li>Automated cloud infrastructure using Terraform, AWS CLI and the AWS SDK for Go.</li>
+<li>Managed production Kubernetes clusters supporting GPU-enabled workloads.</li>
+<li>Contributed across architecture, implementation, deployment and production support.</li>
+<li>Worked within Agile engineering teams delivering continuous platform improvements.</li>
+</ul>
+<h3 id="image-builder-tool-ibt">Image Builder Tool (IBT)</h3>
+<p>Designed and developed an automated build system that converted Unreal Engine projects into production-ready container images.</p>
+<h4 id="highlights-1">Highlights</h4>
+<ul>
+<li>Automated container image creation for customer applications.</li>
+<li>Reduced manual packaging effort and improved deployment consistency.</li>
+<li>Simplified onboarding of new customer projects.</li>
+<li>Integrated with the SPS deployment workflow.</li>
+</ul>
+<h3 id="dory-bot">Dory Bot</h3>
+<p>Designed and developed an AI-powered engineering assistant using Retrieval Augmented Generation (RAG) technologies to improve access to engineering knowledge and documentation.</p>
+<h4 id="highlights-2">Highlights</h4>
+<ul>
+<li>Built using Ollama, LangChain, LangGraph and FAISS.</li>
+<li>Implemented Retrieval Augmented Generation (RAG) workflows.</li>
+<li>Applied prompt engineering, agentic workflows and local Large Language Models (LLMs).</li>
+<li>Improved discovery of engineering documentation and technical knowledge.</li>
+</ul>
+<h3 id="student-data-suite">Student Data Suite</h3>
+<p>Designed and developed a C# application backed by Microsoft SQL Server to manage and report on student academic results.</p>
+<h4 id="highlights-3">Highlights</h4>
+<ul>
+<li>Designed a relational database schema for academic data.</li>
+<li>Developed reporting and administration functionality.</li>
+<li>Automated academic reporting workflows.</li>
+<li>Improved data accuracy and reduced manual administration.</li>
+</ul>
+<h3 id="chum">CHUM</h3>
+<p>Designed and developed a configurable data integration application that imported student information into SQLite before generating vendor-specific export datasets.</p>
+<h4 id="highlights-4">Highlights</h4>
+<ul>
+<li>Designed configurable JSON-driven data transformation workflows.</li>
+<li>Developed SQL-based export generation for multiple external vendors.</li>
+<li>Eliminated repetitive manual data processing.</li>
+<li>Shared the application with other Department of Education schools.</li>
+</ul>
+<h2 id="education">Education</h2>
+<h3 id="bachelor-of-information-technology">Bachelor of Information Technology</h3>
+<p><strong>James Cook University</strong></p>
+<p>Network &amp; Systems Computing</p>
+<h3 id="certificate-iii-in-information-technology">Certificate III in Information Technology</h3>
+<p><strong>Tropical North Queensland TAFE</strong></p>
+
+</body>
+</html>
